@@ -1,0 +1,325 @@
+--control unit --
+
+force op 001111
+force func 000000
+run 
+
+force op 000000
+force func 100000
+run
+
+force op 000000
+force func 100010
+run
+
+force op 000000
+force func 101010
+run
+
+force op 001000
+run
+
+force op 001010
+run
+
+force op 000000
+force func 100100
+run
+
+force op 000000
+force func 100101
+run
+
+force op 000000
+force func 100110
+run
+
+force op 000000
+force func 100111
+run
+
+force op 001100
+run
+
+force op 001101
+run
+
+force op 001110
+run
+
+force op 100011
+run
+
+force op 101011
+run
+
+force op 000010
+run
+
+force op 000000
+force func 001000
+run
+
+force op 000001
+run
+
+force op 000100
+run
+
+force op 000101
+run
+
+--d_cache--
+
+force clk 0
+run 2 
+
+force add 00000
+force d_in 10000000000000000000000000000000
+force data_write 1
+force clk 1
+run 2
+
+force clk 0
+run 2
+
+force d_in 11000000000000000000000000000000
+force data_write 1
+force clk 1
+run 2
+
+force clk 0
+run 2
+
+force add 10000
+force d_in 11100000000000000000000000000000
+force data_write 1
+force clk 1
+run 2
+
+force data_write 0
+force d_in 00000000000000000000000000100000
+run 1
+
+--i_cache---
+
+force add 00000
+run
+
+force add 00001
+run
+
+force add 00010
+run
+
+force add 00011
+run
+
+force add 00100
+run
+
+force add 00101
+run
+
+force add 00110
+run
+
+force add 00111
+run
+
+force add 01000
+run
+
+force add 01001
+run
+
+force add 01010
+run
+
+force add 01011
+run
+
+force add 01100
+run
+
+force add 01101
+run
+
+--mux1---
+
+force inpt0 10000000000000000000000000000000
+force inpt1 00000000000000000000000000000001
+force reg_in_src 0
+run
+force reg_in_src 1
+run
+
+---pc----
+force clk 0
+run
+
+force d 10000000000000000000000000000000
+force clk 1
+run
+
+force clk 0
+run
+
+force reset 1
+force clk 1
+run
+
+
+---sign_extend--
+
+force input 1000000000000000
+force func 00
+run
+force func 01
+run
+force func 10
+run
+force func 11
+run
+force input 0000000001000000
+force func 00
+run
+force func 01
+run
+force func 10
+run
+force func 11
+run
+
+--cpu--
+add wave *
+
+force reset 1
+run 1
+
+force reset 0
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+force clk 0
+run 1
+
+force clk 1
+run 1
+
+
+
+
